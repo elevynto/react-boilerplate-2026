@@ -1,5 +1,12 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# Run tests
 npm test
-[ -f package-lock.json ] || echo 'package-lock.json is missing'
+
+# Ensure package-lock.json does not exist
+if [ -f package-lock.json ]; then
+  echo "Error: package-lock.json detected. This is a pnpm project, so package-lock.json should not exist."
+  echo "Please remove package-lock.json before committing."
+  exit 1
+fi
