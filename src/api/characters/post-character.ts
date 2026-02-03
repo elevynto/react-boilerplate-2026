@@ -1,6 +1,6 @@
 import type { Character } from "@/types";
 
-interface NewCharacter extends Omit<Character, "id"> {}
+type NewCharacter = Omit<Character, "id">;
 
 export const postCharacter = async (newCharacter: NewCharacter): Promise<Character> => {
   // Placeholder implementation

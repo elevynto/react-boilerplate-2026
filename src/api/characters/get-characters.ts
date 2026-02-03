@@ -1,4 +1,4 @@
-import type { Character } from "../../types";
+import type { Character } from "@/types";
 
 export const getCharacters = async (): Promise<Character[]> => {
   // Placeholder implementation

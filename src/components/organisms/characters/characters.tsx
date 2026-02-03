@@ -2,7 +2,7 @@ import { getCharacters, postCharacter } from "@/api";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Button } from "@/components";
 import { useAtom } from "jotai";
-import { charactersAtom } from "../../../store";
+import { charactersAtom } from "@/store";
 import { useEffect } from "react";
 
 export const Characters = () => {
