@@ -1,9 +1,11 @@
 import type { Character } from "@/types";
 
 export const getCharacters = async (): Promise<Character[]> => {
-  // Placeholder implementation
-  return [
-    { id: 1770121791892, name: "Million Ants", image: "https://rickandmortyapi.com/api/character/avatar/226.jpeg" },
-    { id: 1770121804131, name: "Zeta Alpha Rick", image: "https://rickandmortyapi.com/api/character/avatar/389.jpeg" },
-  ];
+  const response = await fetch("/api/characters");
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch characters");
+  }
+
+  return response.json();
 };
