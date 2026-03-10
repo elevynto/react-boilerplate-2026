@@ -36,7 +36,7 @@ function App() {
             </div>
           </CardContent>
         </Card>
-        <p className="mt-6 text-muted-foreground">Click on the Vite and React logos to learn more</p>
+        <p className="mt-6 text-muted-foreground">Click on the Vite and React logos to learn more check</p>
         <Characters />
       </div>
     </QueryClientProvider>
